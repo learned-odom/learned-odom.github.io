@@ -83,6 +83,113 @@
           </div>
         </div>
       </div>
+            <!-- Paper video. -->
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                  <h2 class="title is-3">Supplementary Video</h2>
+                  <div class="publication-video">
+                      <iframe src="./legolas/video/main.mp4" frameborder="0"
+                          allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop is-centered">
+        <center>
+            <h2 class="title is-3">Legolas</h2>
+        </center>
+        <br>
+        <div class="content has-text-justified">
+            <p>
+                <center><u><b>Leg</b></u>ged <u><b>o</b></u>dometry <u><b>l</b></u>earned <u><b>a</b></u>s <u><b>s</b></u>imulated, is the first complete data-driven method for accurate and real-time state estimation. </center>
+            </p>
+            <center>
+                <video poster="" id="go1-inside-2-main" autoplay controls muted loop playsinline width="80%">
+                    <source src="./legolas/video/overview_clipped.mp4" type="video/mp4">
+                </video>
+            </center><br>
+            <center>Legolas is effective as it scales with simulation data and doesn't require analytical modeling of the robot. This flexibility in dataset curation and success at scale allows for training and deployment across multiple robots. In the video below, red is the odometry prediction from Legolas, and blue is the ground truth pose over time.</center>
+            <center>
+              <video poster="" id="go1-inside-2-main" autoplay controls muted loop playsinline width="80%">
+                  <source src="./legolas/video/rollouts_sim_crop.mp4" type="video/mp4">
+              </video>
+          </center>
+        </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop is-centered">
+        <center>
+            <h2 class="title is-3">Comparisons to Baselines</h2>
+        </center>
+        <br>
+        <div class="content has-text-justified">
+            <p>
+                In this baseline rollout, Legolas is compared to relevent filtering-based and learning-based baselines. In this rollout, the behavorial cloning baseline that was trained from real-world data fails to even 
+                leave the area where the robot started. VINS-Fusion, as a visual-baseline in this rollout failed due to lighting reflections causing the 
+                estimate to diverge. The filtering baseline, built off analytical models closely tracks the ground-truth trajectory. However, it falls
+                in quality when compared to Legolas. (Third person view and map are for visualization purposes.)
+            </p>
+            <!-- <div class="videos-flex"> -->
+            <center>
+                <video poster="" id="go1-inside-2-main" autoplay controls muted loop playsinline width="80%">
+                    <source src="./legolas/video/baselines.mp4" type="video/mp4">
+                </video>
+            </center>
+            <!-- </div> -->
+        </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop is-centered">
+        <center>
+            <h2 class="title is-3">Stairs in Indoors Scene</h2>
+        </center>
+        <br>
+        <div class="content has-text-justified">
+            <p>
+                We are able to deploy legolas across diverse terrains such as onto stairs, where it can estimate accurate forward (x), upward (z), and pitch state.
+            </p>
+            <!-- <div class="videos-flex"> -->
+            <center>
+                <video poster="" id="go1-inside-2-main" autoplay controls muted loop playsinline width="80%">
+                    <source src="./legolas/video/stairs_full.mp4" type="video/mp4">
+                </video>
+            </center>
+            <!-- </div> -->
+        </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop is-centered">
+        <center>
+            <h2 class="title is-3">In the Wild</h2>
+        </center>
+        <br>
+        <div class="content has-text-justified">
+            <p>
+                Deploying Legolas, onto a rollout of 180m, it is able to accurately predict the pose of the robot with very little drift outdoors.
+            </p>
+            <!-- <div class="videos-flex"> -->
+            <center>
+                <video poster="" id="go1-inside-2-main" autoplay controls muted loop playsinline width="80%">
+                    <source src="./legolas/video/outdoors.mp4" type="video/mp4">
+                </video>
+            </center>
+            <!-- </div> -->
+        </div>
+    </div>
+  </section>
+
 
 
     <br>
