@@ -188,7 +188,120 @@
     </div>
   </section>
 
+  <section class="section" id="variance">
+    <div class="container is-max-desktop is-centered">
+        <center>
+            <h2 class="title is-3">Covariance Output of Legolas</h2>
+        </center>
+        <br>
+        <div class="content has-text-justified">
+            <p>
+                Legolas outputs a predicted instantenous velocity and variance for each prediction. We demonstrate the covariance output of Legolas on two of the above rollouts.
+            </p>
+            <!-- <div class="videos-flex"> -->
+            <center>
+                <h2 class="title is-4">Building</h2>
+            </center>
+            <p> <b>Analysis:</b> In this scenario, the |Y| displacement and variance are much smaller than the |X| displacement. This matches what is expected as the robot is moving forward, and this would be dominated by an |X| displacement with a smaller |Y| displacement from swaying. After completing the first hallway, the robot turns sharply and causes a dip in displacements, which are matched with a dip in variance as the robot is moving slower. The lower variances when the robot is moving slower can also be observed at the start of the plot as the robot starts to move.
+            </p>
+            <center>
+                <video poster="" id="go1-inside-2-main" autoplay controls muted loop playsinline width="80%">
+                    <source src="./legolas/video/building_w_variance.mp4" type="video/mp4">
+                </video>
+              </center>
+            <center>
+              <h2 class="title is-4">Building 95% Confidence Intervals</h2>
+            </center>
+            <center>
+              <img src="./legolas/images/building_conf.png" width="80%">
+            </center>
 
+            <center>
+            <h2 class="title is-4">Stairs</h2>
+            </center>
+          <center>
+            <p> <b>Analysis:</b> While going up the stairs the |X| and |Z| displacements are very cyclical with their peaks being matched with peaks in variance occurring wherever the displacement changes quickly. When the robot reaches the new floor, variances for |X| and |Z| decrease as there is less instantaneous motion.</p>
+              <video poster="" id="go1-inside-2-main" autoplay controls muted loop playsinline width="80%">
+                  <source src="./legolas/video/stairs_with_variance.mp4" type="video/mp4">
+              </video>
+          </center>
+          <center>
+            <h2 class="title is-4">Stairs 95% Confidence Intervals</h2>
+        </center>
+        <center>
+          <img src="./legolas/images/stairs_conf.png" width="80%">
+        </center>
+            <!-- </div> -->
+        </div>
+    </div>
+  </section>
+
+  <section class="section" id="indoor_dataset">
+    <div class="container is-max-desktop is-centered">
+        <center>
+            <h2 class="title is-3">Indoor Test Dataset</h2>
+        </center>
+        <br>
+        <div class="content has-text-justified">
+            <p>
+                We include visualizations of the robot ground-truth trajectories collected for the test dataset.
+            </p>
+            <!-- <div class="videos-flex"> -->
+            <center>
+                <h2 class="title is-4">Forward Moving with Mocap System</h2>
+            </center>
+            <center>
+              <img src="./legolas/images/trajs_f.png" width="80%">
+            </center>
+            <center>
+              <h2 class="title is-4">Forward Moving with LiDAR-SLAM System</h2>
+            </center>
+            <center>
+              <img src="./legolas/images/trajs_slam.png" width="80%">
+            </center>
+            <center>
+              <h2 class="title is-4">Backwards Moving with Mocap System</h2>
+            </center>
+            <center>
+              <img src="./legolas/images/trajs_b.png" width="80%">
+            </center>
+            <!-- </div> -->
+        </div>
+    </div>
+  </section>
+
+  <section class="section" id="rtabmap">
+    <div class="container is-max-desktop is-centered">
+        <center>
+            <h2 class="title is-3">RTABMap Experiment</h2>
+        </center>
+        <br>
+        <div class="content has-text-justified">
+            <p>
+                In order to showcase how Legolas can be used to improve the robustness of a visual SLAM system we demonstrate the following experiment. This also highlights the large amount of pertubations that are caused by locomotion.
+            </p>
+            <!-- <div class="videos-flex"> -->
+            <center>
+                <h2 class="title is-4">RTABMAP without VIO</h2>
+            </center>
+            <p>On its own, the VIO baseline fails to make it past the carpeted area, and loses tracking at the 0:20 mark.</p>
+            <center>
+            <video poster="" id="go1-inside-2-main" autoplay controls muted loop playsinline width="80%">
+              <source src="./legolas/video/rtab_vio.mp4" type="video/mp4">
+          </video>
+        </center>
+          <center>
+            <h2 class="title is-4">RTABMAP with Legolas</h2>
+        </center>
+        <p>In contrast, when combined with Legolas, the VIO baseline is able to keep mapping.</p>
+        <center>
+        <video poster="" id="go1-inside-2-main" autoplay controls muted loop playsinline width="80%">
+          <source src="./legolas/video/rtab_legolas.mp4" type="video/mp4">
+      </video>
+    </center>
+        </div>
+    </div>
+  </section>
 
     <br>
     <center class="is-size-10">
